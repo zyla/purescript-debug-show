@@ -9,6 +9,12 @@ debugShow :: forall a. a -> String
 
 without any constraints.
 
+## Why?
+
+Because `Show` instances increase code size.
+
+## How it works
+
 It does this by inspecting the runtime representation of values. Unline plain
 `JSON.stringify`, it recognizes the PureScript data constructor name.. Unline
 plain `JSON.stringify`, it recognizes the PureScript data constructor of a
