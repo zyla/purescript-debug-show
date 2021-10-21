@@ -46,3 +46,5 @@ main = launchAff_ $ runSpec [consoleReporter] do
       debugShow (Map.fromFoldable [Tuple 1 2, Tuple 3 4]) `shouldEqual` """[[1,2],[3,4]]"""
       debugShow (Map.fromFoldable [Tuple 1 2, Tuple 2 3, Tuple 3 4, Tuple 4 5])
         `shouldEqual` """[[1,2],[2,3],[3,4],[4,5]]"""
+    it "functions" do
+      debugShow (\x -> x) `shouldEqual` """["Function"]"""
