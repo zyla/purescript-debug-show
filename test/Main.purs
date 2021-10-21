@@ -12,6 +12,7 @@ import Test.Spec.Assertions (shouldEqual)
 import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
 import Data.Tuple (Tuple(..))
+import Data.Map as Map
 
 foreign import null :: Foreign
 foreign import undefined :: Foreign
@@ -40,3 +41,8 @@ main = launchAff_ $ runSpec [consoleReporter] do
       debugShow [1,2,3] `shouldEqual` """[1,2,3]"""
     it "tuples" do
       debugShow (Tuple 1 2) `shouldEqual` """[1,2]"""
+    it "maps" do
+      debugShow Map.empty `shouldEqual` """[]"""
+      debugShow (Map.fromFoldable [Tuple 1 2, Tuple 3 4]) `shouldEqual` """[[1,2],[3,4]]"""
+      debugShow (Map.fromFoldable [Tuple 1 2, Tuple 2 3, Tuple 3 4, Tuple 4 5])
+        `shouldEqual` """[[1,2],[2,3],[3,4],[4,5]]"""
