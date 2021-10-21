@@ -13,8 +13,6 @@ to generate this file without the comments in this block.
 { name = "my-project"
 , dependencies =
   [ "arrays"
-  , "console"
-  , "effect"
   , "foldable-traversable"
   , "foreign"
   , "foreign-object"
@@ -27,5 +25,5 @@ to generate this file without the comments in this block.
   , "unsafe-reference"
   ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs", "test/**/*.purs" ]
+, sources = [ "src/**/*.purs" ]
 }
