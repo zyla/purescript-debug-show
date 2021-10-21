@@ -15,8 +15,7 @@ Because `Show` instances increase code size.
 
 ## How it works
 
-It does this by inspecting the runtime representation of values. Unline plain
-`JSON.stringify`, it recognizes the PureScript data constructor name.. Unline
+It does this by inspecting the runtime representation of values. Unlike
 plain `JSON.stringify`, it recognizes the PureScript data constructor of a
 value and shows its name in the output. It also has special handling for various other types whose runtime representation is unreadable (currently: `Data.Map` which is a 2-3 tree underneath).
 
