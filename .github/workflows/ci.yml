@@ -34,7 +34,7 @@ jobs:
         run: |
           npm install
           spago install
-          spago -x test.dhall install
+          spago install --config test.dhall
 
       - name: Build source
         run: spago build --no-install --purs-args '--censor-lib --strict'
