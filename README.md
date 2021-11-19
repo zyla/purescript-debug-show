@@ -11,7 +11,8 @@ without any constraints.
 
 ## Why?
 
-Because `Show` instances increase code size.
+- Because `Show` instances increase code size.
+- Even if you have a `Show` instance, in polymorphic code sometimes you want to have some logging, but don't want to add a `Show` constraint just for debugging purposes.
 
 ## How it works
 
